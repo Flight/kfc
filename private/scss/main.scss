@@ -368,6 +368,9 @@ a {
         width: 55px;
         height: 55px;
         background: url("../img/carousel-arrows.png");
+        @media only screen and (max-width : 730px) {
+            top: 50px;
+        }
         &.arrow-left {
             left: 10px;
         }
