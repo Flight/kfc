@@ -12,6 +12,12 @@ $ npm install --global gulp-cli
 $ npm install
 ```
 
+To run webserver (for running game):
+```sh
+$ gulp webserver
+```
+Then go to http://localhost:8000/game.html
+
 To watch everything (js + scss):
 ```sh
 $ gulp watch

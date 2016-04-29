@@ -1,6 +1,7 @@
 /* global __dirname */
 
 var gulp = require('gulp');
+var webserver = require('gulp-webserver');
 var eslint = require('gulp-eslint');
 var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
@@ -25,6 +26,18 @@ var PROJECT_PATTERNS = {
         PROJECT_ROOT + '/gulpfile.js'
     ]
 };
+
+gulp.task('webserver', function() {
+    gulp.src('./')
+    .pipe(webserver({
+        livereload: true,
+        directoryListing: {
+            enable: true,
+            path: './'
+        },
+        open: true
+    }));
+});
 
 gulp.task('js', function () {
     return gulp.src(PROJECT_PATTERNS.js)

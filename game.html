@@ -1,0 +1,137 @@
+<!doctype html>
+
+<html lang="ua">
+<head>
+    <meta charset="utf-8">
+    <title>KFC</title>
+    <link rel="stylesheet" href="static/css/main.css">
+</head>
+
+<body>
+    <div class="wrapper wrapper-main">
+        <header class="header">
+            <div class="header-logo"><a href="#"><img src="static/img/logo.png" width="170" height="88" alt="KFC sogood"></a></div>
+            <div class="header-right">
+                <div class="clearfix">
+                    <div class="header-user">
+                        <a href="#" class="header-user-main">На головний сайт</a>
+                        <span class="header-user-sep"></span>
+                        <a href="#" class="header-user-login">Вхід</a>
+                    </div>
+                </div>
+                <nav class="header-nav">
+                    <ul>
+                        <li><a href="#">Переможцi</a></li>
+                        <li><a href="#">Призи</a></li>
+                        <li><a href="#">Правила</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <section class="main-game">
+            <div class="main-game-content">
+                <!-- SWFObject's dynamic embed method replaces this alternative HTML content with Flash content when enough
+                      JavaScript and Flash plug-in support is available. The div is initially hidden so that it doesn't show
+                      when JavaScript is disabled.
+                 -->
+                <div id="flashContent">
+                    <p>
+                        To view this page ensure that Adobe Flash Player version
+                        11.1.0 or greater is installed.
+                    </p>
+                    <script>
+                        var pageHost = ((document.location.protocol == "https:") ? "https://" : "http://");
+                        document.write("<a href='http://www.adobe.com/go/getflashplayer'><img src='"
+                            + pageHost + "www.adobe.com/images/shared/download_buttons/get_flash_player.gif' alt='Get Adobe Flash player' /></a>");
+                    </script>
+                </div>
+            </div>
+        </section>
+
+        <section class="main-game-info">
+            <ul>
+                <li>
+                    <div class="image">
+                        <img src="static/pics/keyboard.png" alt="" width="153" height="131">
+                    </div>
+                    <div class="text">
+                        Використовуйте<br>
+                        клавіатуру<br>
+                        для гри
+                    </div>
+                </li>
+                <li>
+                    <div class="image">
+                        <img src="static/pics/ice.png" alt="" width="153" height="131">
+                    </div>
+                    <div class="text">
+                        На деякий час<br>
+                        робить гру<br>
+                        повільніше
+                    </div>
+                </li>
+                <li>
+                    <div class="image">
+                        <img src="static/pics/pepper.png" alt="" width="153" height="131">
+                    </div>
+                    <div class="text">
+                        Розчищуе<br>
+                        шлях<br>
+                        для тебе
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-copy">
+                    2016. KFC. Всі права захищені
+                </div>
+                <div class="footer-social">
+                    Сподобалась наша акція?Роскажи друзям!
+                    <span class="icons">
+                        <a href="#" class="icon icon-vkontakte"></a>
+                        <a href="#" class="icon icon-facebook"></a>
+                    </span>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+    <script src="static/js/swfobject.min.js"></script>
+    <script>
+        // For version detection, set to min. required Flash Player version, or 0 (or 0.0.0), for no version detection.
+        var swfVersionStr = "11.1.0";
+        // To use express install, set to playerProductInstall.swf, otherwise the empty string.
+        var xiSwfUrlStr = "static/flash/playerProductInstall.swf";
+        var flashvars = {};
+        flashvars.social = "fb";
+        flashvars.baseURL = "static/flash/";
+
+        var params = {};
+        params.quality = "high";
+        params.bgcolor = "#ffffff";
+        params.allowscriptaccess = "sameDomain";
+        params.wmode = "transparent";
+        var attributes = {};
+        attributes.id = "KFC";
+        attributes.name = "KFC";
+        attributes.align = "middle";
+        swfobject.embedSWF(
+            "static/flash/KFCPreloader.swf", "flashContent",
+            "806", "640",
+            swfVersionStr, xiSwfUrlStr,
+            flashvars, params, attributes);
+        // JavaScript enabled so display the flashContent div in case it is not replaced with a swf object.
+        swfobject.createCSS("#flashContent", "display:block;text-align:left; z-index:-1; position:absolute;");
+    </script>
+    <script type="text/javascript" src="//vk.com/js/api/openapi.js?113"></script>
+    <script type="text/javascript">
+        VK.init({apiId: 5434299, onlyWidgets: true});
+    </script>
+    <script src="static/js/jquery.jcarousel.min.js"></script>
+    <script src="static/js/main.js"></script>
+</body>
+</html>

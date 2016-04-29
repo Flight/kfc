@@ -26,3 +26,14 @@
     url("../fonts/officinasansextraboldc-webfont.woff") format("woff"),
     url("../fonts/officinasansextraboldc-webfont.ttf") format("truetype");
 }
+@font-face {
+    font-family: 'OfficinaSerifBlackC';
+    src: url('../fonts/officinaserifblackc-webfont.eot');
+    src: url('../fonts/officinaserifblackc-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/officinaserifblackc-webfont.woff2') format('woff2'),
+         url('../fonts/officinaserifblackc-webfont.woff') format('woff'),
+         url('../fonts/officinaserifblackc-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}

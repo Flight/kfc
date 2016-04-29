@@ -16,7 +16,8 @@ h6 {
     text-align: center;
 }
 h1 {
-    font-size: 61px;
+    font-size: 60px;
+    font-family: "OfficinaSerifBlackC", sans-serif;
     @media only screen and (max-width : 1000px) {
         font-size: 40px;
     }
@@ -65,12 +66,15 @@ a {
 .wrapper-main {
     background: #f8f2e7 url("../img/main-background.jpg") no-repeat 50% 0;
 }
+.wrapper-game {
+    min-width: 806px
+}
 .header {
     @include clearfix;
     max-width: 1170px;
     height: 136px;
     margin: 0 auto;
-    @media only screen and (max-width : 530px) {
+    @media only screen and (max-width : 730px) {
         & {
             height: auto;
         }
@@ -91,6 +95,7 @@ a {
             border-radius: 5px;
         }
         .header-nav {
+            float: none;
             text-align: center;
             margin: 20px 0;
             li {
@@ -134,10 +139,10 @@ a {
     background: url("../img/lock.png") no-repeat 0 2px;
 }
 .header-nav {
-    clear: both;
+    float: right;
     font-family: "OfficinaSansBoldC", sans-serif;
     font-size: 18px;
-    margin: 30px 0 0;
+    margin: 30px 4px 0;
     li {
         display: inline;
         margin: 0 0 0 25px;
@@ -343,7 +348,7 @@ a {
         text-align: center;
         box-sizing: border-box;
         width: 340px;
-        height: 326px;
+        height: 300px;
         padding: 0 35px;
         border-right: solid 1px #f6e4ce;
     }
@@ -355,11 +360,6 @@ a {
         font-family: "OfficinaSansBoldC", sans-serif;
         font-size: 32px;
         margin: 15px 0 0;
-    }
-    .text {
-        font-size: 16px;
-        line-height: 22px;
-        margin: 20px 0 0;
     }
     .arrow {
         position: absolute;
@@ -382,7 +382,7 @@ a {
     @media only screen and (max-width : 730px) {
         li {
             width: 185px;
-            height: 210px;
+            height: 150px;
             padding: 0 10px;
         }
         .image {
@@ -395,11 +395,6 @@ a {
         .title {
             font-size: 16px;
             margin: 5px 0 0;
-        }
-        .text {
-            font-size: 12px;
-            line-height: 16px;
-            margin: 10px 0 0;
         }
     }
 }
@@ -430,6 +425,78 @@ a {
                 height: auto;
                 padding: 0 20px;
             }
+        }
+    }
+}
+.main-license {
+    background: #f6eddd;
+    padding: 90px 0 145px;
+    margin: 19px 0 0;
+}
+.main-license-content {
+    max-width: 1140px;
+    padding: 0 20px;
+    margin: 0 auto;
+
+    h1 {
+        margin: 22px 0 0;
+    }
+}
+.main-license-text {
+    margin: 70px 0 0;
+    background: #fff;
+    padding: 60px 70px;
+    line-height: 1.6;
+}
+.breadcrumbs {
+    a {
+        background: url('../img/arrow-left.png') no-repeat 2px 6px;
+        font-family: "OfficinaSansBoldC", sans-serif;
+        padding: 0 0 0 20px;
+        font-size: 18px;
+    }
+}
+
+.main-game {
+    background: url('../img/main-game-bg.jpg') no-repeat 50% 0;
+    min-width: 806px;
+    height: 843px;
+}
+.main-game-content {
+    width: 806px;
+    height: 640px;
+    margin: 0 auto;
+    padding-top: 120px;
+}
+
+.main-game-info {
+    max-width: 950px;
+    padding: 14px 0 67px;
+    margin: 0 auto;
+    @media only screen and (max-width : 500px) {
+        padding-bottom: 20px;
+    }
+    ul {
+        @include clearfix;
+    }
+    li {
+        float: left;
+        width: 33.3%;
+        text-align: center;
+        @media only screen and (max-width : 500px) {
+            float: none;
+            width: auto;
+            margin-bottom: 20px;
+        }
+    }
+    .text {
+        margin: 26px 0 0;
+        color: #8e1924;
+        font-size: 22px;
+        font-family: "OfficinaSansBoldC", sans-serif;
+        @media only screen and (max-width : 500px) {
+            font-size: 14px;
+            margin-top: 10px;
         }
     }
 }
