@@ -16,7 +16,8 @@ var PROJECT_PATH = {
 var PROJECT_PATTERNS = {
     'scss': [
         PROJECT_PATH.scss + '**/*.scss',
-        '!' + PROJECT_PATH.scss + '**/*.min.scss'
+        '!' + PROJECT_PATH.scss + '**/*.min.scss',
+        '!' + PROJECT_PATH.scss + 'libs/*.scss'
     ],
     'js': [
         PROJECT_PATH.js + '**/*.js',
@@ -40,7 +41,6 @@ gulp.task('scss', function() {
     return gulp.src(PROJECT_PATTERNS.scss)
         .pipe(sassLint())
         .pipe(sassLint.format())
-        .pipe(sassLint.failOnError())
         .pipe(sourcemaps.init())
         .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
         .pipe(autoprefixer('last 2 version'))
