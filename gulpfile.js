@@ -2,7 +2,6 @@
 
 var gulp = require('gulp');
 var eslint = require('gulp-eslint');
-var sassLint = require('gulp-sass-lint');
 var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
 var sourcemaps = require('gulp-sourcemaps');
@@ -39,19 +38,11 @@ gulp.task('js:watch', function () {
 
 gulp.task('scss', function() {
     return gulp.src(PROJECT_PATTERNS.scss)
-        .pipe(sassLint())
-        .pipe(sassLint.format())
         .pipe(sourcemaps.init())
         .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
         .pipe(autoprefixer('last 2 version'))
         .pipe(sourcemaps.write('/maps'))
         .pipe(gulp.dest(PROJECT_PATH.css));
-});
-gulp.task('scss:lint', function() {
-    return gulp.src(PROJECT_PATTERNS.scss)
-        .pipe(sassLint())
-        .pipe(sassLint.format())
-        .pipe(sassLint.failOnError());
 });
 gulp.task('scss:watch', function () {
     gulp.watch(PROJECT_PATTERNS.scss, ['scss']);
@@ -59,4 +50,4 @@ gulp.task('scss:watch', function () {
 
 gulp.task('watch', ['js:watch', 'scss:watch']);
 
-gulp.task('default', ['js', 'scss:lint']);
+gulp.task('default', ['js', 'scss']);
