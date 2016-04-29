@@ -319,6 +319,9 @@ a {
 
 .main-prizes {
     padding: 76px 0 132px;
+    @media only screen and (max-width : 730px) {
+        padding: 20px 0 40px;
+    }
 }
 .main-prizes-carousel {
     position: relative;
@@ -401,6 +404,9 @@ a {
 .main-prizes-buttons {
     text-align: center;
     margin: 60px 0 0;
+    @media only screen and (max-width : 730px) {
+        margin: 20px 0 0;
+    }
     a {
         display: inline-block;
         color: #3f2e25;
