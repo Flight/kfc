@@ -1,0 +1,28 @@
+@import url(https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin,cyrillic);
+@font-face {
+    font-family: "OfficinaSansBoldC";
+    font-weight: normal;
+    font-style: normal;
+
+    src: url("../fonts/OfficinaSansBoldC.eot");
+    src: local("☺"), url("../fonts/OfficinaSansBoldC.woff") format("woff"), url("../fonts/OfficinaSansBoldC.ttf") format("truetype"), url("../fonts/OfficinaSansBoldC.svg") format("svg");
+}
+@font-face {
+    font-family: "OfficinaSansBookC";
+    font-weight: normal;
+    font-style: normal;
+
+    src: url("../fonts/OfficinaSansBookC.eot");
+    src: local("☺"), url("../fonts/OfficinaSansBookC.woff") format("woff"), url("../fonts/OfficinaSansBookC.ttf") format("truetype"), url("../fonts/OfficinaSansBookC.svg") format("svg");
+}
+@font-face {
+    font-family: "OfficinaSansExtraBoldC";
+    font-weight: normal;
+    font-style: normal;
+
+    src: url("../fonts/officinasansextraboldc-webfont.eot");
+    src: url("../fonts/officinasansextraboldc-webfont.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/officinasansextraboldc-webfont.woff2") format("woff2"),
+    url("../fonts/officinasansextraboldc-webfont.woff") format("woff"),
+    url("../fonts/officinasansextraboldc-webfont.ttf") format("truetype");
+}
