@@ -1,9 +1,6 @@
 (function ($) {
     var carousel = $('.js-carousel');
     carousel.jcarousel({
-        // btnPrev: '.js-carousel-prev',
-        // btnNext: '.js-carousel-next',
-        // visible: 3
         wrap: 'circular'
     });
     $('.js-carousel-prev').click(function (clickEvent) {
