@@ -705,7 +705,7 @@ a {
 
 .main-prizes {
     margin: 19px 0 0;
-    padding: 90px 0 11px;
+    padding: 90px 0 51px;
     @media only screen and (max-width : 730px) {
         padding: 30px 0 50px;
     }
@@ -725,6 +725,49 @@ a {
     text-align: center;
     line-height: 1.2;
     margin: 15px 0 0;
+}
+.main-prizes-list {
+    @include clearfix;
+    margin: 60px 0 70px;
+    li {
+        float: left;
+        text-align: center;
+    }
+    &.main-prizes-list-3 li {
+        width: 33.3%;
+    }
+    &.main-prizes-list-4 li {
+        width: 25%;
+    }
+    &.main-prizes-list-1 li {
+        float: none;
+    }
+    .name {
+        font-size: 36px;
+        color: #ab1d2c;
+        font-family: "OfficinaSansBoldC", sans-serif;
+        margin: 10px 0 0;
+    }
+    .count {
+        color: #392820;
+        font-size: 32px;
+        margin: 10px 0 0;
+    }
+    @media only screen and (max-width : 800px) {
+        margin: 20px 0 25px;
+        img {
+            width: 50%;
+            height: 50%;
+        }
+        .name {
+            font-size: 16px;
+            margin: 5px 0 0;
+        }
+        .count {
+            font-size: 14px;
+            margin: 5px 0 0;
+        }
+    }
 }
 
 .footer {
