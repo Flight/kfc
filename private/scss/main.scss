@@ -5,6 +5,9 @@
 .clearfix {
     @include clearfix;
 }
+.text-center {
+    text-align: center !important;
+}
 
 h1,
 h2,
@@ -16,8 +19,8 @@ h6 {
     text-align: center;
 }
 h1 {
-    font-size: 60px;
     font-family: "OfficinaSerifBlackC", sans-serif;
+    font-size: 60px;
     @media only screen and (max-width : 1000px) {
         font-size: 40px;
     }
@@ -67,7 +70,13 @@ a {
     background: #f8f2e7 url("../img/main-background.jpg") no-repeat 50% 0;
 }
 .wrapper-game {
-    min-width: 806px
+    min-width: 806px;
+}
+.wrapper-rules {
+    background: url("../img/main-rules-bg.jpg") no-repeat 50% 158px;
+}
+.wrapper-prizes {
+    background: url("../img/prizes-bg.jpg") no-repeat 50% 158px;
 }
 .header {
     @include clearfix;
@@ -250,6 +259,29 @@ a {
     @media only screen and (min-width : 1300px) {
         margin: 39px 280px 0;
     }
+    &.main-rules-list-page {
+        .main-rules-item {
+            background-image: url("../img/arrow-right-grey.png");
+            &:last-child {
+                background: none;
+            }
+        }
+        .main-rules-title {
+            color: #ab1d2c;
+            font-family: "OfficinaSansBoldC", sans-serif;
+            font-size: 22px;
+            margin: 24px 0 0 0;
+            @media only screen and (max-width : 730px) {
+                font-size: 14px;
+            }
+        }
+        @media only screen and (min-width : 1300px) {
+            margin: 100px 60px 110px;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
 }
 .main-rules-item {
     float: left;
@@ -272,6 +304,15 @@ a {
     }
     &.main-rules-image-3 {
         background-position: -146px 0;
+    }
+    &.main-rules-image-4 {
+        background-position: -219px 0;
+    }
+    &.main-rules-image-5 {
+        background-position: -292px 0;
+    }
+    &.main-rules-image-6 {
+        background-position: -365px 0;
     }
 }
 .main-rules-number {
@@ -429,38 +470,48 @@ a {
     }
 }
 .main-license {
-    background: #f6eddd;
-    padding: 90px 0 145px;
     margin: 19px 0 0;
+    padding: 90px 0 145px;
+    background: #f6eddd;
+    @media only screen and (max-width : 730px) {
+        padding: 30px 0 50px;
+    }
 }
 .main-license-content {
     max-width: 1140px;
-    padding: 0 20px;
     margin: 0 auto;
-
+    padding: 0 20px;
     h1 {
         margin: 22px 0 0;
     }
 }
 .main-license-text {
-    margin: 70px 0 0;
-    background: #fff;
-    padding: 60px 70px;
     line-height: 1.6;
+    margin: 70px 0 0;
+    padding: 60px 70px;
+    background: #fff;
+    @media only screen and (max-width : 730px) {
+        margin: 20px 0 0;
+        padding: 20px;
+    }
 }
 .breadcrumbs {
     a {
-        background: url('../img/arrow-left.png') no-repeat 2px 6px;
         font-family: "OfficinaSansBoldC", sans-serif;
-        padding: 0 0 0 20px;
         font-size: 18px;
+        padding: 0 0 0 20px;
+        background: url("../img/arrow-left.png") no-repeat 2px 6px;
+        @media only screen and (max-width : 730px) {
+            font-size: 14px;
+            background-position: 2px 3px;
+        }
     }
 }
 
 .main-game {
-    background: url('../img/main-game-bg.jpg') no-repeat 50% 0;
     min-width: 806px;
     height: 843px;
+    background: url("../img/main-game-bg.jpg") no-repeat 50% 0;
 }
 .main-game-content {
     width: 806px;
@@ -468,11 +519,10 @@ a {
     margin: 0 auto;
     padding-top: 120px;
 }
-
 .main-game-info {
     max-width: 950px;
-    padding: 14px 0 67px;
     margin: 0 auto;
+    padding: 14px 0 67px;
     @media only screen and (max-width : 500px) {
         padding-bottom: 20px;
     }
@@ -481,8 +531,8 @@ a {
     }
     li {
         float: left;
-        width: 33.3%;
         text-align: center;
+        width: 33.3%;
         @media only screen and (max-width : 500px) {
             float: none;
             width: auto;
@@ -490,15 +540,191 @@ a {
         }
     }
     .text {
-        margin: 26px 0 0;
         color: #8e1924;
-        font-size: 22px;
         font-family: "OfficinaSansBoldC", sans-serif;
+        font-size: 22px;
+        margin: 26px 0 0;
         @media only screen and (max-width : 500px) {
             font-size: 14px;
             margin-top: 10px;
         }
     }
+}
+
+
+.main-results {
+    margin: 19px 0 0;
+    padding: 90px 0 145px;
+    background: #f5ecdb url("../img/results-bg.jpg") no-repeat 50% 0;
+    .breadcrumbs a {
+        color: #3d3b3b;
+    }
+    @media only screen and (max-width : 730px) {
+        padding: 30px 0 50px;
+    }
+    .winned {
+        color: #ab1d2c;
+        font-size: 22px;
+        text-align: center;
+        margin: 22px 0 0;
+        @media only screen and (max-width : 730px) {
+            font-size: 14px;
+        }
+    }
+}
+.main-results-content {
+    position: relative;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+    h1 {
+        margin: 22px 0 0;
+    }
+}
+.main-results-table-container {
+    margin: 74px 70px;
+    @media only screen and (max-width : 730px) {
+        margin: 20px;
+    }
+}
+.main-results-table {
+    color: #3d3b3b;
+    font-family: "OfficinaSansBoldC", sans-serif;
+    width: 100%;
+    th {
+        font-size: 18px;
+        font-weight: normal;
+        text-align: left;
+        padding: 0 0 22px;
+        &.place {
+            width: 11%;
+        }
+        &.pic {
+            width: 15%;
+        }
+        &.name {
+            width: 47%;
+        }
+        &.score {
+            width: 22%;
+        }
+        @media only screen and (max-width : 730px) {
+            font-size: 14px;
+        }
+    }
+    td {
+        font-size: 36px;
+        vertical-align: middle;
+        border-bottom: solid 1px #fff;
+        @media only screen and (max-width : 730px) {
+            font-size: 18px;
+        }
+        &.place {
+            text-align: center;
+            border-right: solid 1px #fff;
+            background: #f5dfcc;
+        }
+        &.pic {
+            padding: 11px 18px;
+            background: #f7eedf;
+            img {
+                vertical-align: middle;
+                @media only screen and (max-width : 730px) {
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+        }
+        &.name {
+            background: #f7eedf;
+        }
+        &.score {
+            color: #ab1d2c;
+            text-align: center;
+            border-left: solid 1px #fff;
+            background: #f5dfcc;
+        }
+    }
+}
+.pagination {
+    color: #ab1d2c;
+    font-family: "OfficinaSansBoldC", sans-serif;
+    font-size: 36px;
+    text-align: center;
+    li {
+        display: inline-block;
+        margin: 0 3px;
+    }
+    @media only screen and (max-width : 730px) {
+        font-size: 14px;
+    }
+}
+.main-game-rules {
+    margin: 19px 0 0;
+    padding: 90px 0 11px;
+    @media only screen and (max-width : 730px) {
+        padding: 30px 0 50px;
+    }
+}
+.main-game-rules-content {
+    position: relative;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+    h1 {
+        margin: 22px 0 0;
+    }
+}
+
+.main-points {
+    position: relative;
+    height: 843px;
+    margin: 0 0 98px;
+    background: url("../img/main-points.jpg") no-repeat 50% 0;
+    @media only screen and (max-width : 1170px) {
+        height: 685px;
+        background-image: url("../img/main-points-1300.jpg");
+    }
+    @media only screen and (max-width : 1000px) {
+        height: 527px;
+        background-image: url("../img/main-points-1000.jpg");
+    }
+    @media only screen and (max-width : 730px) {
+        height: 385px;
+        background-image: url("../img/main-points-730.jpg");
+    }
+    @media only screen and (max-width : 530px) {
+        height: 279px;
+        background-image: url("../img/main-points-530.jpg");
+    }
+    @media only screen and (max-width : 450px) {
+        height: 237px;
+        background-image: url("../img/main-points-450.jpg");
+    }
+}
+
+.main-prizes {
+    margin: 19px 0 0;
+    padding: 90px 0 11px;
+    @media only screen and (max-width : 730px) {
+        padding: 30px 0 50px;
+    }
+}
+.main-prizes-content {
+    position: relative;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+    h1 {
+        margin: 22px 0 0;
+    }
+}
+.main-prizes-info {
+    color: #48443d;
+    font-size: 18px;
+    text-align: center;
+    line-height: 1.2;
+    margin: 15px 0 0;
 }
 
 .footer {
