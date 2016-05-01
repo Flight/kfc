@@ -52,6 +52,9 @@ html {
     min-width: 320px;
     background: #fff;
 }
+body {
+    position: relative;
+}
 
 a {
     color: #ab1d2c;
@@ -509,9 +512,38 @@ a {
 }
 
 .main-game {
-    min-width: 806px;
+    position: relative;
     height: 843px;
     background: url("../img/main-game-bg.jpg") no-repeat 50% 0;
+    @media only screen and (max-width : 1170px) {
+        height: 685px;
+        background-image: url("../img/main-game-bg-1300.jpg");
+        .main-game-content {
+            padding-top: 33px;
+        }
+    }
+    @media only screen and (max-width : 1000px) {
+        height: 527px;
+        background-image: url("../img/main-game-bg-1000.jpg");
+        .main-game-content {
+            display: none;
+        }
+        .main-game-message {
+            display: block;
+        }
+    }
+    @media only screen and (max-width : 730px) {
+        height: 385px;
+        background-image: url("../img/main-game-bg-730.jpg");
+    }
+    @media only screen and (max-width : 530px) {
+        height: 279px;
+        background-image: url("../img/main-game-bg-530.jpg");
+    }
+    @media only screen and (max-width : 450px) {
+        height: 237px;
+        background-image: url("../img/main-game-bg-450.jpg");
+    }
 }
 .main-game-content {
     width: 806px;
@@ -549,6 +581,21 @@ a {
             margin-top: 10px;
         }
     }
+}
+.main-game-message {
+    display: none;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    left: 10px;
+    text-align: center;
+    margin-top: -30px;
+}
+.main-game-message-text {
+    display: inline-block;
+    padding: 10px;
+    border-radius: 10px;
+    background: #fff;
 }
 
 
@@ -722,8 +769,8 @@ a {
 .main-prizes-info {
     color: #48443d;
     font-size: 18px;
-    text-align: center;
     line-height: 1.2;
+    text-align: center;
     margin: 15px 0 0;
 }
 .main-prizes-list {
@@ -743,9 +790,9 @@ a {
         float: none;
     }
     .name {
-        font-size: 36px;
         color: #ab1d2c;
         font-family: "OfficinaSansBoldC", sans-serif;
+        font-size: 36px;
         margin: 10px 0 0;
     }
     .count {
@@ -819,4 +866,74 @@ a {
             background: url("../img/facebook.png");
         }
     }
+}
+
+.popup-shadow {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 200;
+    opacity: 0.7;
+    background: #392820;
+}
+.popup-window {
+    position: fixed;
+    top: 290px;
+    right: 0;
+    left: 0;
+    z-index: 300;
+    color: #fff;
+    text-align: center;
+    h1 {
+        color: #fff;
+    }
+    @media only screen and (max-width : 730px) {
+        top: 50px;
+    }
+}
+.popup-auth {
+    .text {
+        font-size: 18px;
+        line-height: 1.4;
+        margin-top: 45px;
+    }
+    .auth-icons {
+        position: relative;
+        margin-top: 26px;
+        padding-top: 37px;
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            overflow: hidden;
+            width: 103px;
+            height: 3px;
+            background: #fff;
+            margin-left: -51px;
+        }
+    }
+    .auth-icon {
+        display: inline-block;
+        width: 68px;
+        height: 68px;
+        margin: 0 9px;
+        &.auth-icon-facebook {
+            background: url('../img/auth-facebook.png');
+        }
+        &.auth-icon-vkontakte {
+            background: url('../img/auth-vkontakte.png');
+        }
+    }
+}
+.popup-close {
+    position: absolute;
+    top: 35px;
+    right: 33px;
+    z-index: 300;
+    width: 45px;
+    height: 44px;
+    background: url(../img/popup-close.png);
 }
